@@ -19,7 +19,7 @@ class Start
     when "reset_answers"
       Reset_answers.new
     when  "print_answers"
-      Print_answers.new
+      Print_answers.new(answerarray)
     when  "quit"
       puts "Goodbye"
     else 
@@ -43,7 +43,6 @@ end
 
 class Reset_answers
   include Answers
-  attr_accessor :answerarray
   def initialize
     reset_answers
   # - ability to reset answers back to the original bank (hint: think arr.clone)
