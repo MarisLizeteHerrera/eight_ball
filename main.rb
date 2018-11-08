@@ -43,12 +43,19 @@ class Add_answers
 
 class Reset_answers
   include Answers
+  attr_accessor :answerarray
+  def initialize
+    reset_answers
   # - ability to reset answers back to the original bank (hint: think arr.clone)
   # - via easter egg question ("reset_answers")
 end
 
 class Print_answers
   include Answers
+  attr_accessor :answerarray
+  def initialize(answerarray)
+    answerarray = answerarray
+    print_answers(answerarray)
   # - ability to have eight ball print all answers
   # - via easter egg question ("print_answers")
 end
