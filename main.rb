@@ -1,20 +1,21 @@
 
 require_relative "./answers"
 
-@answerarray = ["Yes", "No", "Maybe later", "I don't know", "For sure"]
 class Start
+  attr_accessor :answerarray
   include Answers
   # - User inputs question
   # - Computer outputs random answer
   # - User inputs "QUIT"
   # - Computer outputs a goodbye message and exits
   # - This class manages the other classes
-  def initialize()
+  def initialize(answerarray)
+    answerarray = answerarray
     puts "MAGIC 8 BALL\nplease enter a question"
-    question = gets.chomp.to_s
+    question = gets.chomp
     case question
     when "add_answers"
-      Add_answers.new
+      Add_answers.new(answerarray)
     when "reset_answers"
       Reset_answers.new
     when  "print_answers"
@@ -22,16 +23,18 @@ class Start
     when  "quit"
       puts "Goodbye"
     else 
-      basic
+      basic(answerarray)
     end
   end
 
 end
 
 class Add_answers
+  attr_accessor :answerarray
   include Answers
-  def initialize ()
-    add_answers
+  def initialize(answerarray)
+    answerarray = answerarray
+    add_answers(answerarray)
   end
   # - ability to add more answers:
   # - via easter egg question ("add_answers")
@@ -50,4 +53,4 @@ class Print_answers
   # - via easter egg question ("print_answers")
 end
 
-Start.new
+Start.new(answerarray = ["Yes", "No", "Maybe later", "I don't know", "For sure"])

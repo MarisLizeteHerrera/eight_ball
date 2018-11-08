@@ -8,12 +8,16 @@
 module Answers
   
   def basic
-    puts @answerarray.sample
+    puts answerarray.sample
+    Start.new
   end
 
-  def add_answers
+  def add_answers(answerarray)
     #add new answers
     #redirects to start
+    puts "enter a new answer"
+    newanswer = gets.chomp
+    answerarray << newanswer
   end
 
   def reset_answers
