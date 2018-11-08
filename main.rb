@@ -39,7 +39,7 @@ class Add_answers
   # - ability to add more answers:
   # - via easter egg question ("add_answers")
   # - do not let them add the same answer if the eight ball already has that answer
-  end
+end
 
 class Reset_answers
   include Answers
@@ -48,6 +48,7 @@ class Reset_answers
     reset_answers
   # - ability to reset answers back to the original bank (hint: think arr.clone)
   # - via easter egg question ("reset_answers")
+  end
 end
 
 class Print_answers
@@ -58,6 +59,7 @@ class Print_answers
     print_answers(answerarray)
   # - ability to have eight ball print all answers
   # - via easter egg question ("print_answers")
+  end
 end
 
 Start.new(answerarray = ["Yes", "No", "Maybe later", "I don't know", "For sure"])
