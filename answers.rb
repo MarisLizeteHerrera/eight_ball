@@ -23,13 +23,14 @@ module Answers
   def reset_answers
     #resets answers
     #redirects to start
-    @answerarray = ["Yes", "No", "Maybe later", "I don't know", "For sure"]
-    Start.new
+    answerarray = ["Yes", "No", "Maybe later", "I don't know", "For sure"]
+    Start.new(answerarray)
   end
 
-  def print_answers
+  def print_answers(answerarray)
     #prints all answers
     #redirects to start
+    puts "#{(answerarray)}"
   end
 
 end
