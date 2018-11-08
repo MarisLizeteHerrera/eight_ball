@@ -32,6 +32,7 @@ module Answers
     #prints all answers
     #redirects to start
     puts "#{(answerarray)}"
+    Start.new(answerarray)
   end
 
 end
