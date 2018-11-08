@@ -4,11 +4,11 @@
 #method that resets the answers back to default
 #method that prints all the answers on the screen
 
-@answerarray = []
 
 module Answers
+  
   def basic
-    #default yes no answers
+    puts @answerarray.sample
   end
 
   def add_answers
@@ -19,6 +19,8 @@ module Answers
   def reset_answers
     #resets answers
     #redirects to start
+    @answerarray = ["Yes", "No", "Maybe later", "I don't know", "For sure"]
+    Start.new
   end
 
   def print_answers

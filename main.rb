@@ -1,7 +1,7 @@
 
 require_relative "./answers"
 
-
+@answerarray = ["Yes", "No", "Maybe later", "I don't know", "For sure"]
 class Start
   include Answers
   # - User inputs question
