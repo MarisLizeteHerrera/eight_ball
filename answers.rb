@@ -7,9 +7,9 @@
 
 module Answers
   
-  def basic
+  def basic(answerarray)
     puts answerarray.sample
-    Start.new
+    Start.new(answerarray)
   end
 
   def add_answers(answerarray)
@@ -18,6 +18,7 @@ module Answers
     puts "enter a new answer"
     newanswer = gets.chomp
     answerarray << newanswer
+    Start.new(answerarray)
   end
 
   def reset_answers
