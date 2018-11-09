@@ -1,4 +1,8 @@
 
+
+#Please Note that we purposefully overcomplicated this project
+#To learn, and because the instructions implied that we should use multiple classes.
+
 require_relative "./answers"
 
 class Start
